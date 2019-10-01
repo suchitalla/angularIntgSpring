@@ -39,5 +39,9 @@ public class PersonService {
 
 	}
 
+	public Person getPerson(String name) {
+		// TODO Auto-generated method stub
+		return pr.findByFirstNameOrLastName(name, name);
+	}
 
 }

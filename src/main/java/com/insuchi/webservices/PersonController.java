@@ -16,10 +16,16 @@ public class PersonController {
 	@Autowired
 	PersonService ps;
 
-	@GetMapping("/persons/{id}")
-	public Person getPerson(@PathVariable Long id) {
+	/*
+	 * @GetMapping("/persons/{id}") public Person getPerson(@PathVariable Long id) {
+	 * 
+	 * return ps.getPerson(id); }
+	 */
 
-		return ps.getPerson(id);
+	@GetMapping("/persons/{name}")
+	public Person getPerson(@PathVariable String name) {
+
+		return ps.getPerson(name);
 	}
 
 
